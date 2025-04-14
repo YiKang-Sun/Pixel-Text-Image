@@ -1,15 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div style="display: grid;place-items: center;width: 100vw;height: 100vh;background-color: white;">
+    <PixelImage/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PixelImage from './components/PixelImage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PixelImage
   }
 }
 </script>
@@ -21,6 +22,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

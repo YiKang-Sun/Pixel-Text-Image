@@ -1,5 +1,17 @@
 # pixel-image
 
+## Display  
+### to black-white  
+![](./imgs/bw.png)  
+### to black-white reverse  
+![](./imgs/bwr.png)  
+### to colorful  
+![](./imgs/color.png)  
+### to text  
+![](./imgs/text.png)  
+### to text reverse  
+![](./imgs/textr.png)
+
 ## Project setup
 ```
 npm install
