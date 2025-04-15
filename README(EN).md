@@ -1,5 +1,5 @@
 # pixel-image
-![click here to preview](https://w1412x.github.io/Pixel-Text-Image/dist/)
+[click here to preview](https://w1412x.github.io/Pixel-Text-Image/dist/)
 ## Display  
 ### to black-white  
 ![](./imgs/bw.png)  
