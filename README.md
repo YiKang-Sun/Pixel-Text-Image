@@ -1,5 +1,8 @@
 # pixel-image
 
+## 使用(预览)  
+![点击此处预览功能](https://w1412x.github.io/Pixel-Text-Image/dist/)
+
 ## 显示   
 
 ### 转为黑白  
