@@ -1,36 +1,45 @@
 # pixel-image
 
-## Display  
-### to black-white  
-![](./imgs/bw.png)  
-### to black-white reverse  
-![](./imgs/bwr.png)  
-### to colorful  
-![](./imgs/color.png)  
-### to text  
-![](./imgs/text.png)  
-### to text reverse  
-![](./imgs/textr.png)
+## 显示   
 
-## Project setup
+### 转为黑白  
+![](./imgs/bw.png)  
+### 转为黑白反转  
+![](./imgs/bwr.png)  
+### 转为彩色  
+![](./imgs/color.png)  
+### 线条风格  
+![](./imgs/line.png)    
+### 线条风格反转  
+![](./imgs/liner.png)   
+### 转为文字  
+![](./imgs/text.png)  
+### 转为文字反转  
+![](./imgs/textr.png)    
+### 文字线条风格  
+![](./imgs/textline.png)  
+### 文字线条风格反转  
+![](./imgs/textliner.png)  
+
+## 项目设置
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 开发模式下编译并热重载
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 生产模式下编译并压缩
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### 检查并修复文件
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 自定义配置
+参见 [配置参考](https://cli.vuejs.org/config/)。

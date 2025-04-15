@@ -6,7 +6,7 @@
         <v-select label="风格化类型" density="compact" variant="outlined" :items="itemTypes"
             v-model="itemType"></v-select>
         <div class="col-div">
-            <v-slider v-if="this.itemType=='黑白'||this.itemType=='黑白(反转)'||this.itemType=='彩色'" 
+            <v-slider v-if="ifImage" 
                 v-model="width" :max="oriWidth" :step="1" :min="4" :color="themeColor" style="width: 100%;"
                 label="图像宽度" hide-details>
                 <template v-slot:append>
@@ -14,7 +14,7 @@
                         variant="outlined" hide-details></v-text-field>
                 </template>
             </v-slider>
-            <v-slider v-if="this.itemType=='黑白'||this.itemType=='黑白(反转)'||this.itemType=='彩色'" 
+            <v-slider v-if="ifImage" 
                 v-model="height" :max="oriHeight" :step="1" :min="4" :color="themeColor" label="图像高度"
                 style="width: 100%;" hide-details>
                 <template v-slot:append>
@@ -22,7 +22,7 @@
                         variant="outlined" hide-details></v-text-field>
                 </template>
             </v-slider>
-            <v-slider v-if="this.itemType=='黑白'||this.itemType=='黑白(反转)'||this.itemType=='彩色'" 
+            <v-slider v-if="ifImage" 
                 v-model="pixelSize" :max="50" :step="1" :min="1" :color="themeColor" label="像素块大小"
                 style="width: 100%;" hide-details>
                 <template v-slot:append>
@@ -30,7 +30,7 @@
                         variant="outlined" hide-details></v-text-field>
                 </template>
             </v-slider>
-            <v-slider v-if="this.itemType=='文本'||this.itemType=='文本(反转)'" 
+            <v-slider v-if="ifText" 
                 v-model="textRowNum" :max="50" :step="1" :min="1" :color="themeColor" label="行数"
                 style="width: 100%;" hide-details>
                 <template v-slot:append>
@@ -38,11 +38,19 @@
                         variant="outlined" hide-details></v-text-field>
                 </template>
             </v-slider>
-            <v-slider v-if="this.itemType=='文本'||this.itemType=='文本(反转)'" 
+            <v-slider v-if="ifText" 
                 v-model="textColNum" :max="50" :step="1" :min="1" :color="themeColor" label="列数"
                 style="width: 100%;" hide-details>
                 <template v-slot:append>
                     <v-text-field v-model="textColNum" density="compact" style="width: 100px" type="number"
+                        variant="outlined" hide-details></v-text-field>
+                </template>
+            </v-slider>
+            <v-slider v-if="ifLine" 
+                v-model="lineWidth" :max="8" :step="1" :min="1" :color="themeColor" label="线条宽度"
+                style="width: 100%;" hide-details>
+                <template v-slot:append>
+                    <v-text-field v-model="lineWidth" density="compact" style="width: 100px" type="number"
                         variant="outlined" hide-details></v-text-field>
                 </template>
             </v-slider>
@@ -55,7 +63,7 @@
                 <v-btn variant="text" @click="selectImage">上传原图像</v-btn>
                 <image-card :width="200" :src="oriImageUrl"></image-card>
             </div>
-            <div v-if="this.itemType=='黑白'||this.itemType=='黑白(反转)'||this.itemType=='彩色'"  class="col-div">
+            <div v-if="ifImage"  class="col-div">
                 <div class="medium-text-div">
                     转换后图像
                 </div>
@@ -63,24 +71,24 @@
             </div>
         </div>
         <div class='text-img-container'>
-            <div v-if="this.itemType=='文本'||this.itemType=='文本(反转)'" class="text-display">
+            <div v-if="ifText" class="text-display">
                 {{ this.imgText }}
             </div>
         </div>
-        <v-btn v-if="(this.itemType=='黑白'||this.itemType=='黑白(反转)'||this.itemType=='彩色')&&styleImageUrl != null" @click="saveImage" variant="outlined" :color="themeColor" width="100%" style="margin: 10px;font-weight: bold;" prepend-icon="mdi-download">保存图片</v-btn>
-        <v-btn v-if="(this.imgText)&&this.itemType=='文本'||this.itemType=='文本(反转)'" @click="copyText" variant="outlined" :color="themeColor" width="100%" style="margin: 10px;font-weight: bold;" prepend-icon="mdi-download">复制到剪贴板</v-btn>
+        <v-btn v-if="(ifImage)&&styleImageUrl != null" @click="saveImage" variant="outlined" :color="themeColor" width="100%" style="margin: 10px;font-weight: bold;" prepend-icon="mdi-download">保存图片</v-btn>
+        <v-btn v-if="(this.imgText)&&ifText" @click="copyText" variant="outlined" :color="themeColor" width="100%" style="margin: 10px;font-weight: bold;" prepend-icon="mdi-download">复制到剪贴板</v-btn>
     </v-card>
 </template>
 <script>
 import { globalProperties } from '@/main';
 import ImageCard from './ImageCard.vue';
-import { convertImageToText, convertToPixelatedBW, convertToPixelatedColor } from '@/algorithm/alg';
-import { ref } from 'vue';
+import { convertImageToText, convertToPixelatedBW, convertToPixelatedColor, imageToSketch } from '@/algorithm/alg';
+import { computed, ref } from 'vue';
 
 export default {
     setup() {
         const themeColor = globalProperties.$themeColor;
-        const itemTypes=['黑白', '彩色','黑白(反转)','文本','文本(反转)'];
+        const itemTypes=['黑白', '彩色','黑白(反转)','线条','线条(反转)','文本(线条)','文本(线条反转)','文本','文本(反转)'];
         const loading=ref(false);
         const setLoadingState=(state)=>{
             loading.value=state;
@@ -96,6 +104,27 @@ export default {
         ImageCard,
     },
     data() {
+        const ifImage=computed(()=>{
+            if(['黑白', '彩色','黑白(反转)','线条','线条(反转)'].includes(this.itemType)){
+                return true;
+            }else{
+                return false;
+            }
+        })
+        const ifText=computed(()=>{
+            if(['文本(线条)','文本(线条反转)','文本','文本(反转)'].includes(this.itemType)){
+                return true;
+            }else{
+                return false;
+            }
+        })
+        const ifLine=computed(()=>{
+            if(['线条','线条(反转)','文本(线条)','文本(线条反转)'].includes(this.itemType)){
+                return true;
+            }else{
+                return false;
+            }
+        })
         return {
             itemType: '黑白',
             oriImage: null,
@@ -110,6 +139,10 @@ export default {
             oriWidth: 1024,
             textColNum:32,
             textRowNum:18,
+            ifText,
+            ifImage,
+            lineWidth:2,
+            ifLine,
         }
     },
     methods: {
@@ -174,12 +207,30 @@ export default {
                    this.styleImage = await convertToPixelatedColor(this.oriImage,this.width,this.height,this.pixelSize);
                    this.styleImageUrl = URL.createObjectURL(this.styleImage);
                    break;
+                case '线条':
+                    this.styleImage = await imageToSketch(this.oriImage,this.width,this.height,false,this.lineWidth);
+                    this.styleImage=await convertToPixelatedBW(this.styleImage,this.width,this.height,this.pixelSize);
+                    this.styleImageUrl = URL.createObjectURL(this.styleImage);
+                    break;
+                case '线条(反转)':
+                    this.styleImage = await imageToSketch(this.oriImage,this.width,this.height,true,this.lineWidth);
+                    this.styleImage=await convertToPixelatedBW(this.styleImage,this.width,this.height,this.pixelSize);
+                    this.styleImageUrl = URL.createObjectURL(this.styleImage);
+                    break;
                 case '文本':
                     bwImg=await convertToPixelatedBW(this.oriImage, this.width, this.height, 1);
                     this.imgText=await convertImageToText(bwImg,this.textRowNum,this.textColNum);
                     break;
                 case '文本(反转)':
                     bwImg=await convertToPixelatedBW(this.oriImage, this.width, this.height, 1, true);
+                    this.imgText=await convertImageToText(bwImg,this.textRowNum,this.textColNum);
+                    break;
+                case '文本(线条)':
+                    bwImg=await imageToSketch(this.oriImage, this.width, this.height, false,this.lineWidth);
+                    this.imgText=await convertImageToText(bwImg,this.textRowNum,this.textColNum);
+                    break;
+                case '文本(线条反转)':
+                    bwImg=await imageToSketch(this.oriImage, this.width, this.height, true,this.lineWidth);
                     this.imgText=await convertImageToText(bwImg,this.textRowNum,this.textColNum);
                     break;
             }

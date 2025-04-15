@@ -1,4 +1,4 @@
-export const braille_symbols=['⠀', '⠁', '⠂', '⠃', '⠄', '⠅', '⠆', '⠇', '⠈', '⠉', '⠊', '⠋', '⠌', '⠍', '⠎', '⠏', '⠐', '⠑', '⠒', '⠓', '⠔', '⠕', '⠖', '⠗', '⠘', '⠙', '⠚', '⠛', '⠜', '⠝', '⠞', '⠟', '⠠', '⠡', '⠢', '⠣', '⠤', '⠥', '⠦', '⠧', '⠨', '⠩', '⠪', '⠫', '⠬', '⠭', '⠮', '⠯', '⠰', '⠱', '⠲', '⠳', '⠴', '⠵', '⠶', '⠷', '⠸', '⠹', '⠺', '⠻', '⠼', '⠽', '⠾', '⠿', '⡀', '⡁', '⡂', '⡃', '⡄', '⡅', '⡆', '⡇', '⡈', '⡉', '⡊', '⡋', '⡌', '⡍', '⡎', '⡏', '⡐', '⡑', '⡒', '⡓', '⡔', '⡕', '⡖', '⡗', '⡘', '⡙', '⡚', '⡛', '⡜', '⡝', '⡞', '⡟', '⡠', '⡡', '⡢', '⡣', '⡤', '⡥', '⡦', '⡧', '⡨', '⡩', '⡪', '⡫', '⡬', '⡭', '⡮', '⡯', '⡰', '⡱', '⡲', '⡳', '⡴', '⡵', '⡶', '⡷', '⡸', '⡹', '⡺', '⡻', '⡼', '⡽', '⡾', '⡿', '⢀', '⢁', '⢂', '⢃', '⢄', '⢅', '⢆', '⢇', '⢈', '⢉', '⢊', '⢋', '⢌', '⢍', '⢎', '⢏', '⢐', '⢑', '⢒', '⢓', '⢔', '⢕', '⢖', '⢗', '⢘', '⢙', '⢚', '⢛', '⢜', '⢝', '⢞', '⢟', '⢠', '⢡', '⢢', '⢣', '⢤', '⢥', '⢦', '⢧', '⢨', '⢩', '⢪', '⢫', '⢬', '⢭', '⢮', '⢯', '⢰', '⢱', '⢲', '⢳', '⢴', '⢵', '⢶', '⢷', '⢸', '⢹', '⢺', '⢻', '⢼', '⢽', '⢾', '⢿', '⣀', '⣁', '⣂', '⣃', '⣄', '⣅', '⣆', '⣇', '⣈', '⣉', '⣊', '⣋', '⣌', '⣍', '⣎', '⣏', '⣐', '⣑', '⣒', '⣓', '⣔', '⣕', '⣖', '⣗', '⣘', '⣙', '⣚', '⣛', '⣜', '⣝', '⣞', '⣟', '⣠', '⣡', '⣢', '⣣', '⣤', '⣥', '⣦', '⣧', '⣨', '⣩', '⣪', '⣫', '⣬', '⣭', '⣮', '⣯', '⣰', '⣱', '⣲', '⣳', '⣴', '⣵', '⣶', '⣷', '⣸', '⣹', '⣺', '⣻', '⣼', '⣽', '⣾', '⣿'];
+export const braille_symbols = ['⠀', '⠁', '⠂', '⠃', '⠄', '⠅', '⠆', '⠇', '⠈', '⠉', '⠊', '⠋', '⠌', '⠍', '⠎', '⠏', '⠐', '⠑', '⠒', '⠓', '⠔', '⠕', '⠖', '⠗', '⠘', '⠙', '⠚', '⠛', '⠜', '⠝', '⠞', '⠟', '⠠', '⠡', '⠢', '⠣', '⠤', '⠥', '⠦', '⠧', '⠨', '⠩', '⠪', '⠫', '⠬', '⠭', '⠮', '⠯', '⠰', '⠱', '⠲', '⠳', '⠴', '⠵', '⠶', '⠷', '⠸', '⠹', '⠺', '⠻', '⠼', '⠽', '⠾', '⠿', '⡀', '⡁', '⡂', '⡃', '⡄', '⡅', '⡆', '⡇', '⡈', '⡉', '⡊', '⡋', '⡌', '⡍', '⡎', '⡏', '⡐', '⡑', '⡒', '⡓', '⡔', '⡕', '⡖', '⡗', '⡘', '⡙', '⡚', '⡛', '⡜', '⡝', '⡞', '⡟', '⡠', '⡡', '⡢', '⡣', '⡤', '⡥', '⡦', '⡧', '⡨', '⡩', '⡪', '⡫', '⡬', '⡭', '⡮', '⡯', '⡰', '⡱', '⡲', '⡳', '⡴', '⡵', '⡶', '⡷', '⡸', '⡹', '⡺', '⡻', '⡼', '⡽', '⡾', '⡿', '⢀', '⢁', '⢂', '⢃', '⢄', '⢅', '⢆', '⢇', '⢈', '⢉', '⢊', '⢋', '⢌', '⢍', '⢎', '⢏', '⢐', '⢑', '⢒', '⢓', '⢔', '⢕', '⢖', '⢗', '⢘', '⢙', '⢚', '⢛', '⢜', '⢝', '⢞', '⢟', '⢠', '⢡', '⢢', '⢣', '⢤', '⢥', '⢦', '⢧', '⢨', '⢩', '⢪', '⢫', '⢬', '⢭', '⢮', '⢯', '⢰', '⢱', '⢲', '⢳', '⢴', '⢵', '⢶', '⢷', '⢸', '⢹', '⢺', '⢻', '⢼', '⢽', '⢾', '⢿', '⣀', '⣁', '⣂', '⣃', '⣄', '⣅', '⣆', '⣇', '⣈', '⣉', '⣊', '⣋', '⣌', '⣍', '⣎', '⣏', '⣐', '⣑', '⣒', '⣓', '⣔', '⣕', '⣖', '⣗', '⣘', '⣙', '⣚', '⣛', '⣜', '⣝', '⣞', '⣟', '⣠', '⣡', '⣢', '⣣', '⣤', '⣥', '⣦', '⣧', '⣨', '⣩', '⣪', '⣫', '⣬', '⣭', '⣮', '⣯', '⣰', '⣱', '⣲', '⣳', '⣴', '⣵', '⣶', '⣷', '⣸', '⣹', '⣺', '⣻', '⣼', '⣽', '⣾', '⣿'];
 /**
  * 
  * @param {Image} blob 
@@ -8,19 +8,19 @@ export const braille_symbols=['⠀', '⠁', '⠂', '⠃', '⠄', '⠅', '⠆', '
  * @param {Boolean} reverse 
  * @returns 
  */
-export function convertToPixelatedBW(blob, width, height, blockSize , reverse=false) {
+export function convertToPixelatedBW(blob, width, height, blockSize, reverse = false) {
     return new Promise((resolve, reject) => {
         const img = new Image();
         const reader = new FileReader();
 
-        reader.onload = function(event) {
+        reader.onload = function (event) {
             img.src = event.target.result;
         };
 
         reader.onerror = reject;
         reader.readAsDataURL(blob);
 
-        img.onload = function() {
+        img.onload = function () {
             const canvas = document.createElement('canvas');
             canvas.width = width;
             canvas.height = height;
@@ -59,10 +59,10 @@ export function convertToPixelatedBW(blob, width, height, blockSize , reverse=fa
                     g = Math.floor(g / pixelCount);
                     b = Math.floor(b / pixelCount);
                     const avg = (r + g + b) / 3;
-                    let gray=0;
+                    let gray = 0;
                     if (reverse) {
                         gray = avg <= threshold ? 255 : 0;
-                    }else{
+                    } else {
                         gray = avg >= threshold ? 255 : 0;
                     }
                     for (let dy = 0; dy < blockSize; dy++) {
@@ -81,7 +81,7 @@ export function convertToPixelatedBW(blob, width, height, blockSize , reverse=fa
                 }
             }
             ctx.putImageData(imageData, 0, 0);
-            canvas.toBlob(function(newBlob) {
+            canvas.toBlob(function (newBlob) {
                 resolve(newBlob);
             }, 'image/png');
         };
@@ -103,14 +103,14 @@ export function convertToPixelatedColor(blob, width, height, blockSize) {
         const img = new Image();
         const reader = new FileReader();
 
-        reader.onload = function(event) {
+        reader.onload = function (event) {
             img.src = event.target.result;
         };
 
         reader.onerror = reject;
         reader.readAsDataURL(blob);
 
-        img.onload = function() {
+        img.onload = function () {
             const canvas = document.createElement('canvas');
             canvas.width = width;
             canvas.height = height;
@@ -166,7 +166,7 @@ export function convertToPixelatedColor(blob, width, height, blockSize) {
                 }
             }
             ctx.putImageData(imageData, 0, 0);
-            canvas.toBlob(function(newBlob) {
+            canvas.toBlob(function (newBlob) {
                 resolve(newBlob);
             }, 'image/png');
         };
@@ -367,61 +367,168 @@ export async function resizeImageBlob(blob, width, height) {
     }
 }
 
-export function compareRGB(data1,data2){
-    try{
+export function compareRGB(data1, data2) {
+    try {
         if (data1.length !== data2.length) {
             throw new Error('ImageData lengths do not match');
         }
         let diffCount = 0;
         for (let i = 0; i < data1.length; i++) {
-            if(data1[i][0] != data2[i][0]||data1[i][1] != data2[i][1]||data1[i][2] != data2[i][2]){
+            if (data1[i][0] != data2[i][0] || data1[i][1] != data2[i][1] || data1[i][2] != data2[i][2]) {
                 diffCount++;
             }
         }
         return 1 - (diffCount / (data1.length));
-    }catch (e) {
+    } catch (e) {
         return 0;
     }
 }
 
 
-export async function convertImageToText(blob,rows,cols){
-    let blobs=await splitImageBlob(blob,rows,cols);
-    let splitedBlobRGBList=[];
-    for(let i=0;i<blobs.length;i++){
-        let tmp=await resizeImageBlob(blobs[i],26,44)
-        tmp=await blobToRgbList(tmp);
+export async function convertImageToText(blob, rows, cols) {
+    let blobs = await splitImageBlob(blob, rows, cols);
+    let splitedBlobRGBList = [];
+    for (let i = 0; i < blobs.length; i++) {
+        let tmp = await resizeImageBlob(blobs[i], 26, 44)
+        tmp = await blobToRgbList(tmp);
         splitedBlobRGBList.push(tmp);
     }
-    let charBlobs=[];
-    for(let i=0;i<braille_symbols.length;i++){
+    let charBlobs = [];
+    for (let i = 0; i < braille_symbols.length; i++) {
         charBlobs.push(await charToImage(braille_symbols[i]));
     }
-    let charBlobRGBList=[];
-    for(let i=0;i<charBlobs.length;i++){
+    let charBlobRGBList = [];
+    for (let i = 0; i < charBlobs.length; i++) {
         charBlobRGBList.push(await blobToRgbList(charBlobs[i]));
     }
-    let resultIds=[];
-    for(let i=0;i<splitedBlobRGBList.length;i++){
-        let mostFitId=-1;
-        let maxScore=-1;
-        for(let u=0;u<braille_symbols.length;u++){
-            let score=compareRGB(splitedBlobRGBList[i],charBlobRGBList[u]);
-            if(score>maxScore){
-                maxScore=score;
-                mostFitId=u;
-            }else{
+    let resultIds = [];
+    for (let i = 0; i < splitedBlobRGBList.length; i++) {
+        let mostFitId = -1;
+        let maxScore = -1;
+        for (let u = 0; u < braille_symbols.length; u++) {
+            let score = compareRGB(splitedBlobRGBList[i], charBlobRGBList[u]);
+            if (score > maxScore) {
+                maxScore = score;
+                mostFitId = u;
+            } else {
                 continue;
             }
         }
         resultIds.push(mostFitId);
     }
-    let result="";
-    for(let i=0;i<rows;i++){
-        for(let u=0;u<cols;u++){
-            result+=braille_symbols[resultIds[i*cols+u]];
+    let result = "";
+    for (let i = 0; i < rows; i++) {
+        for (let u = 0; u < cols; u++) {
+            result += braille_symbols[resultIds[i * cols + u]];
         }
-        result+="\n";
+        result += "\n";
     }
     return result;
+}
+
+/**
+ * 
+ * @param {Image} blob 
+ * @param {Number} width 
+ * @param {Number} height 
+ * @param {Boolean} reverse
+ * @param {Number} linewidth 
+ * @returns 
+ */
+export async function imageToSketch(blob, width, height, reverse=false, linewidth=1) {
+    const img = new Image();
+    img.src = URL.createObjectURL(blob);
+    await new Promise(resolve => img.onload = resolve);
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0, width, height);
+    const imageData = ctx.getImageData(0, 0, width, height);
+    const data = imageData.data;
+    const sobelX = [
+        [-1, 0, 1],
+        [-2, 0, 2],
+        [-1, 0, 1]
+    ];
+    const sobelY = [
+        [-1, -2, -1],
+        [0, 0, 0],
+        [1, 2, 1]
+    ];
+
+    const outputImageData = ctx.createImageData(width, height);
+    const outputData = outputImageData.data;
+    const threshold = 128;
+    const edgeMap = Array.from({ length: height }, () => Array(width).fill(false));
+
+    for (let y = 1; y < height - 1; y++) {
+        for (let x = 1; x < width - 1; x++) {
+            let gx = 0;
+            let gy = 0;
+
+            for (let ky = -1; ky <= 1; ky++) {
+                for (let kx = -1; kx <= 1; kx++) {
+                    const pixelIndex = ((y + ky) * width + (x + kx)) * 4;
+                    const pixelValue = data[pixelIndex];
+
+                    gx += pixelValue * sobelX[ky + 1][kx + 1];
+                    gy += pixelValue * sobelY[ky + 1][kx + 1];
+                }
+            }
+
+            const magnitude = Math.sqrt(gx * gx + gy * gy);
+            if (magnitude > threshold) {
+                edgeMap[y][x] = true;
+            }
+        }
+    }
+    const dilatedEdgeMap = Array.from({ length: height }, () => Array(width).fill(false));
+    const kernelSize = 2 * linewidth + 1;
+    const halfKernel = Math.floor(kernelSize / 2);
+
+    for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
+            for (let ky = -halfKernel; ky <= halfKernel; ky++) {
+                for (let kx = -halfKernel; kx <= halfKernel; kx++) {
+                    const ny = y + ky;
+                    const nx = x + kx;
+                    if (ny >= 0 && ny < height && nx >= 0 && nx < width && edgeMap[ny][nx]) {
+                        dilatedEdgeMap[y][x] = true;
+                        break;
+                    }
+                }
+                if (dilatedEdgeMap[y][x]) break;
+            }
+        }
+    }
+    for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
+            const index = (y * width + x) * 4;
+            if (dilatedEdgeMap[y][x]) {
+                if (reverse) {
+                    outputData[index] = 255;
+                    outputData[index + 1] = 255;
+                    outputData[index + 2] = 255;
+                } else {
+                    outputData[index] = 0;
+                    outputData[index + 1] = 0;
+                    outputData[index + 2] = 0;
+                }
+            } else {
+                if (reverse) {
+                    outputData[index] = 0;
+                    outputData[index + 1] = 0;
+                    outputData[index + 2] = 0;
+                } else {
+                    outputData[index] = 255;
+                    outputData[index + 1] = 255;
+                    outputData[index + 2] = 255;
+                }
+            }
+            outputData[index + 3] = 255;
+        }
+    }
+    ctx.putImageData(outputImageData, 0, 0);
+    return new Promise((resolve) => canvas.toBlob(resolve));
 }
